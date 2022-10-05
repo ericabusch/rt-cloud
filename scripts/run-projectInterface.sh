@@ -46,11 +46,11 @@ if [[ $VNC == true ]]; then
 fi
 
 # activate rtcloud conda env if needed
-if [ -z $CONDA_DEFAULT_ENV ] || [ $CONDA_DEFAULT_ENV != "rtcloud" ]; then
+if [ -z $CONDA_DEFAULT_ENV ] || [ $CONDA_DEFAULT_ENV != "rtcloud_av" ]; then
     source ~/.bashrc
     CONDA_BASE=$(conda info --base)
     source $CONDA_BASE/etc/profile.d/conda.sh
-    conda activate rtcloud
+    conda activate rtcloud_av1
 fi
 
 pushd web
@@ -59,7 +59,7 @@ popd
 
 export PYTHONPATH=./rtCommon/:$PYTHONPATH
 echo "python rtCommon/projectServer.py ${args[@]}"
-python rtCommon/projectServer.py ${args[@]}
+python3 rtCommon/projectServer.py ${args[@]}
 
 if [[ ! -z $VNC_PID ]]; then
   # kill $VNC_PID

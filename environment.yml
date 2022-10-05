@@ -1,4 +1,4 @@
-name: rtcloud
+name: rtcloud_av1
 channels:
   - defaults
   - conda-forge
@@ -26,7 +26,28 @@ dependencies:
   - tornado
   - websocket-client
   - wsaccel # for websocket acceleration
+  - brainiak::brainiak  # specifing the channel
+  - nomkl
+  - scikit-learn
   - pip:
     - inotify
     - pybids
     - watchdog
+    - psychtoolbox
+    - psychopy
+    - phate
+    - pillow
+    - graphtools
+    - imageio
+    - imageio-ffmpeg
+    - brainiak
+    - javascripthon
+    - json-tricks
+    - pybids
+    - pygame
+    - pyglet
+    - pygsp
+    - questplus
+    - scprep
+    - seaborn
+    - wxpython
