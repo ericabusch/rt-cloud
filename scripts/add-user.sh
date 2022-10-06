@@ -23,7 +23,7 @@ if [ -z $CONDA_DEFAULT_ENV ] || [ $CONDA_DEFAULT_ENV != "rtcloud" ]; then
   source ~/.bashrc
   CONDA_BASE=$(conda info --base)
   source $CONDA_BASE/etc/profile.d/conda.sh
-  conda activate rtcloud
+  conda activate rtcloud_av1
 fi
 
 export PYTHONPATH=./rtCommon/:$PYTHONPATH
