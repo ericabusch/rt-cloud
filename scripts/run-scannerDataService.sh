@@ -19,13 +19,13 @@ for i in ${!args[@]}; do
 done
 
 # activate conda python env if needed
-if [ -z $CONDA_DEFAULT_ENV ] || [ $CONDA_DEFAULT_ENV != "rtcloud" ]; then
-  source ~/.bashrc
-  CONDA_BASE=$(conda info --base)
-  source $CONDA_BASE/etc/profile.d/conda.sh
-  conda activate rtcloud_av1
-fi
+#if [ -z $CONDA_DEFAULT_ENV ] || [ $CONDA_DEFAULT_ENV != "rtcloud_av1" ]; then
+#  source ~/.bashrc
+#  CONDA_BASE=$(conda info --base)
+#  source $CONDA_BASE/etc/profile.d/conda.sh
+#  conda activate rtcloud_av1
+#fi
 
 export PYTHONPATH=./rtCommon/:$PYTHONPATH
 echo "python rtCommon/scannerDataService.py ${args[@]}"
-python rtCommon/scannerDataService.py ${args[@]}
+python3 rtCommon/scannerDataService.py ${args[@]}
