@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-## Any changes made to this file should ALSO be made to data_streamer.sh!
+## THIS FILE IS IDENTICAL TO run-scannerDataService.sh
+## Any changes made to this file should ALSO be made to that file! (and vice-versa)
 
 ### Default Parameters Set within ScannerDataService ##
 # SERVER='localhost:8888'
@@ -30,4 +30,4 @@ fi
 
 export PYTHONPATH=./rtCommon/:$PYTHONPATH
 echo "python rtCommon/scannerDataService.py ${args[@]}"
-python3 rtCommon/scannerDataService.py ${args[@]}
+python rtCommon/scannerDataService.py ${args[@]}

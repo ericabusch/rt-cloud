@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-## Any changes made to this file should ALSO be made to data_analyser.sh!
+## THIS FILE IS IDENTICAL TO run-projectInterface.sh
+## Any changes made to this file should ALSO be made to that file! (and vice-versa)
 
 # get commandline args
 args=("${@}")
@@ -51,9 +51,7 @@ fi
 if [ -z $CONDA_DEFAULT_ENV ] || [ $CONDA_DEFAULT_ENV != "rtcloud_av1" ]; then
     source ~/.bashrc
     CONDA_BASE=$(conda info --base)
-    
     source $CONDA_BASE/etc/profile.d/conda.sh
-    conda deactivate
     conda activate rtcloud_av1
 fi
 
